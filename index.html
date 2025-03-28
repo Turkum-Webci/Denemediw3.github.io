@@ -64,6 +64,16 @@
             font-size: 20px;
             font-weight: 600;
         }
+        #b6{
+            margin-right: 50px;
+            margin-top: 30px;
+            background-color: brown;
+            border-radius: 20px;
+            border: 0;
+            box-shadow: 0px 0px 5px 5px brown;
+            font-size: 20px;
+            font-weight: 600;
+        }
         #b1:hover{
             transition: 0.5s;
             background-color: red;
@@ -89,6 +99,12 @@
             font-weight: 700;
         }
         #b5:hover{
+            transition: 0.5s;
+            background-color: red;
+            box-shadow: 0px 0px 12px 10px red;
+            font-weight: 700;
+        }
+        #b6:hover{
             transition: 0.5s;
             background-color: red;
             box-shadow: 0px 0px 12px 10px red;
@@ -129,6 +145,10 @@ display: inline;
             display: none;
             background-color: rgb(255, 136, 136);
         }
+        #wdAI1{
+            display: none;
+            background-color: rgb(255, 185, 185);
+        }
         #dp{
             background-color: sandybrown;
             width: 40px;
@@ -156,6 +176,7 @@ display: inline;
         <button onclick="A2()" id="b2">DenemedivAI</button>
         <button onclick="A4()" id="b3">Ofiso</button>
         <button onclick="A5()" id="b5">JAL.js</button>
+        <button onclick="A6()" id="b6">wdAI Kuralları</button>
         <button onclick="A3()" id="b4">Hakkımızda</button>
         <div id="dp"><center><p id="dp1">15</p></center></div>
     </div>
@@ -207,15 +228,34 @@ display: inline;
     </div>
     <div id="a5">
         <h1 id="dss">JAL Dilini Projenize Nasıl Eklersiniz ?</h1>
-        <p>"https://cdn.jsdelivr.net/gh/Turkum-Webci/JAL-v2/JAL.js" URLsini script src İle Projenize Ekleyebilirsiniz</p>
+        <p>"https://cdn.jsdelivr.net/gh/Turkum-Webci/JAL-v3/JAL.js" URLsini script src İle Projenize Ekleyebilirsiniz</p>
         <p>J('olusturp("istediginiz_yazi");'); = Bu Kod İle Yazı Yazarsınız</p>
         <p>J('Uyar("Uyari_Yazisi");'); = JSdeki alert("") Kodu İle Aynı İşlevdedir</p>
         <p>J('consolayaz("konsola_yazacagınız_yazi");'); = Konsola Yazı Yazdırırsınız</p>
         <p>J('olusturr("istediginiz.resim");';) = Resim Koymanıza yarar</p>
         <p>J('olusturi("istediginiz_site");'); = İframe Koymanıza yarar</p>
         <p>J('ai1("istediginiz_kelime");'); = AI Oluşturmanıza Yarar</p>
+        <p>J('olusturinp("istediginiz_tip");'); = Girdi Oluşturmaya Yarar</p>
         <p>Örnek Kod: </p>
         <iframe src="S.txt" frameborder="0"></iframe>
+    </div>
+    <div id="wdAI1">
+        <h2>wdAI Kuralları: </h2>
+        <ul>
+            <li>
+        <p>1) Yapay Zekaların Çekirdeği Olmalı. Çekirdekde: Makine öğrenimi ve API kullanımı olmalı</p>
+            </li><li>
+        <p>2) Yapay Zekaların Dağıtımı Olmalı: Çekirdekleri Açık Kaynak Olup Başkaları Kullanmalı</p>
+            </li><li>
+        <p>3) Yapay Zekalar Yanıltıcı Bilgilerden Uzaklaştırılmalı</p>
+            </li><li>
+        <p>4) Yapay Zekaların Daha Çok İnsancıl Olmalı: Şaka,Daha Duygusal ve Empati Gibi Özellikler Eklenmeli</p>
+            </li><li>
+        <p>5) Yapay Zekalar Yazılımcılar İçin Derlemede Yapmalı</p>
+        </li><li>
+        <p>6) Yapay Zekalar Kullanıcı Dostu Olmalı.</p>
+        </li>
+        </ul>
     </div>
     <script>
         var dp = parseInt(localStorage.getItem("dp") || 15);
@@ -243,6 +283,7 @@ display: inline;
             document.getElementById("a3").style.display = "none";
             document.getElementById("a4").style.display = "none";
             document.getElementById("a5").style.display = "none";
+            document.getElementById("wdAI1").style.display = "none";
         }
         function A2(){
             document.getElementById("a2").style.display = "block";
@@ -250,6 +291,7 @@ display: inline;
             document.getElementById("a3").style.display = "none";
             document.getElementById("a4").style.display = "none";
             document.getElementById("a5").style.display = "none";
+            document.getElementById("wdAI1").style.display = "none";
         }
         function A3(){
             document.getElementById("a3").style.display = "block";
@@ -257,6 +299,7 @@ display: inline;
             document.getElementById("a1").style.display = "none";
             document.getElementById("a4").style.display = "none";
             document.getElementById("a5").style.display = "none";
+            document.getElementById("wdAI1").style.display = "none";
         }
         function A4(){
             document.getElementById("a4").style.display = "block";
@@ -264,9 +307,19 @@ display: inline;
             document.getElementById("a2").style.display = "none";
             document.getElementById("a1").style.display = "none";
             document.getElementById("a5").style.display = "none";
+            document.getElementById("wdAI1").style.display = "none";
         }
         function A5(){
             document.getElementById("a5").style.display = "block";
+            document.getElementById("a3").style.display = "none";
+            document.getElementById("a2").style.display = "none";
+            document.getElementById("a1").style.display = "none";
+            document.getElementById("a4").style.display = "none";
+            document.getElementById("wdAI1").style.display = "none";
+        }
+        function A6(){
+            document.getElementById("wdAI1").style.display = "block";
+            document.getElementById("a5").style.display = "none";
             document.getElementById("a3").style.display = "none";
             document.getElementById("a2").style.display = "none";
             document.getElementById("a1").style.display = "none";
