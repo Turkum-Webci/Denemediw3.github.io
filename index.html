@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anasayfa</title>
+    <title>Denemediv'e Hoşgeldiniz</title>
+    <link rel="icon" type="image/png" href="denemediv (2).png">
     <style>
         #renk1{
             background-color: rgb(0, 0, 0);
@@ -167,9 +168,13 @@ display: inline;
             position: absolute;
             transition: all 1s ease;
         }
+        #DH2{
+            display: none;
+        }
     </style>
 </head>
 <body>
+    <p id="DH">Hoşgeldiniz</p>
     <div id="renk1">
     <div id="kont1">
         <button onclick="A1()" id="b1">Anasayfa</button>
@@ -178,6 +183,7 @@ display: inline;
         <button onclick="A5()" id="b5">JAL.js</button>
         <button onclick="A6()" id="b6">wdAI Kuralları</button>
         <button onclick="A3()" id="b4">Hakkımızda</button>
+        <button onclick="A7()" id="b4">DH Oluştur</button>
         <div id="dp"><center><p id="dp1">15</p></center></div>
     </div>
     </div>
@@ -197,7 +203,7 @@ display: inline;
     </div>
         <div id="a2">
             <p id="aa1">DenemedivAIyi</p>
-            <a href="denemedivAI.zip" download="DenemedivAI.zip" id="aa2" onclick="p1()">Buradan</a>
+            <a href="DenemedivAI.html" download="dAI.html" id="aa2" onclick="p1()">Buradan</a>
             <p id="aa3">İndirebilirsiniz</p>
             <br>
             <hr>
@@ -257,6 +263,32 @@ display: inline;
         </li>
         </ul>
     </div>
+    <div id="DH2">
+        <button onclick="CIK()">❌</button>
+        <br><br>
+        <input type="text" placeholder="Adınız Ne Olsun ?" id="ad1">
+        <button onclick="GAD1()">Gönder</button>
+    </div>
+    <script>
+        var dh = document.getElementById("DH2");
+        var dh1 = document.getElementById("DH");
+        dh1.innerHTML = "Hoşgeldiniz " + localStorage.getItem("ads");
+        function CIK(){
+            dh.style.display = "none";
+        }
+        function A7(){
+            dh.style.display = "block";
+        }
+        function GAD1(){
+            var ad1 = document.getElementById("ad1").value;
+            dh1.innerHTML = "Hoşgeldiniz " + ad1;
+            LOCALUPDATEONE();
+        }
+        function LOCALUPDATEONE(){
+            var ad1 = document.getElementById("ad1").value;
+            localStorage.setItem("ads", ad1);
+        }
+    </script>
     <script>
         var dp = parseInt(localStorage.getItem("dp") || 15);
         var dp1 = document.getElementById("dp1");
