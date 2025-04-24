@@ -146,6 +146,10 @@ display: inline;
             display: none;
             background-color: rgb(255, 136, 136);
         }
+        #a8{
+            display: none;
+            background-color: rgb(104, 0, 0);
+        }
         #wdAI1{
             display: none;
             background-color: rgb(255, 185, 185);
@@ -182,6 +186,7 @@ display: inline;
         <button onclick="A4()" id="b3">Ofiso</button>
         <button onclick="A5()" id="b5">JAL.js</button>
         <button onclick="A6()" id="b6">wdAI Kuralları</button>
+        <button onclick="A8()" id="b6">DivSecurity</button>
         <button onclick="A3()" id="b4">Hakkımızda</button>
         <button onclick="A7()" id="b4">DH Oluştur</button>
         <div id="dp"><center><p id="dp1">15</p></center></div>
@@ -189,6 +194,13 @@ display: inline;
     </div>
     <button onclick="pkz()" id="pekmez1" style="border: 0; background: 0; cursor: pointer;">Puan Kazanma Tuşu !</button>
     <div id="badges"><p id="d1d1">Hoşgeldiniz Denemedive +15 Puan (ilk defa girdiyseniz)</p></div>
+    <div id="a8">
+        <h2>DivSecurity Antivirüs'ü</h2>
+        <p>DivSecurity Denemediv Tarafından geliştirilmiş bir Antivirüsdür</p>
+        <h5>Uyarı:</h5>
+        <p>DivSecurity; <u>bilgisayarınızın masaüstündeki tüm .scr Uzantılı dosyaları siler</u> ve bilgisayarınızdaki dosya uzantılarını size söyler DivSecurity gelişmiş bir antivirüs değildir ama antivirüslerin çoğunun yapamadığı .scr dosyalarını silip sizi korur ve test aşamasındadır ondan dolayı doğru çalışmayabilir ve bilgisayarınızda tam erişime sahiptir</p>
+        <a href="Div.vbs" download="DivSecurity.vbs" style="font-size: 30px; color: rgb(255, 0, 0);"onclick="p3()">DivSecurity'i İndir !</a>
+    </div>
     <div id="a1">
         <h2>Denemediv'e Hoşgeldiniz:</h2>
         <hr>
@@ -279,6 +291,7 @@ display: inline;
         function A7(){
             dh.style.display = "block";
         }
+        
         function GAD1(){
             var ad1 = document.getElementById("ad1").value;
             dh1.innerHTML = "Hoşgeldiniz " + ad1;
@@ -316,6 +329,7 @@ display: inline;
             document.getElementById("a4").style.display = "none";
             document.getElementById("a5").style.display = "none";
             document.getElementById("wdAI1").style.display = "none";
+            document.getElementById("a8").style.display = "none";
         }
         function A2(){
             document.getElementById("a2").style.display = "block";
@@ -324,6 +338,7 @@ display: inline;
             document.getElementById("a4").style.display = "none";
             document.getElementById("a5").style.display = "none";
             document.getElementById("wdAI1").style.display = "none";
+            document.getElementById("a8").style.display = "none";
         }
         function A3(){
             document.getElementById("a3").style.display = "block";
@@ -332,6 +347,7 @@ display: inline;
             document.getElementById("a4").style.display = "none";
             document.getElementById("a5").style.display = "none";
             document.getElementById("wdAI1").style.display = "none";
+            document.getElementById("a8").style.display = "none";
         }
         function A4(){
             document.getElementById("a4").style.display = "block";
@@ -340,6 +356,7 @@ display: inline;
             document.getElementById("a1").style.display = "none";
             document.getElementById("a5").style.display = "none";
             document.getElementById("wdAI1").style.display = "none";
+            document.getElementById("a8").style.display = "none";
         }
         function A5(){
             document.getElementById("a5").style.display = "block";
@@ -348,6 +365,7 @@ display: inline;
             document.getElementById("a1").style.display = "none";
             document.getElementById("a4").style.display = "none";
             document.getElementById("wdAI1").style.display = "none";
+            document.getElementById("a8").style.display = "none";
         }
         function A6(){
             document.getElementById("wdAI1").style.display = "block";
@@ -356,6 +374,16 @@ display: inline;
             document.getElementById("a2").style.display = "none";
             document.getElementById("a1").style.display = "none";
             document.getElementById("a4").style.display = "none";
+            document.getElementById("a8").style.display = "none";
+        }
+        function A8(){
+            document.getElementById("a8").style.display = "block";
+            document.getElementById("a5").style.display = "none";
+            document.getElementById("a3").style.display = "none";
+            document.getElementById("a2").style.display = "none";
+            document.getElementById("a1").style.display = "none";
+            document.getElementById("a4").style.display = "none";
+            document.getElementById("wdAI1").style.display = "none";
         }
         function p1(){
             dp += Math.floor(Math.random() * 11) + 10;
@@ -368,6 +396,12 @@ display: inline;
             dp1.innerHTML = dp;
             u();
             document.getElementById("d1d1").innerHTML = "Ofiso'yu İndirdiğin İçin Teşekkürler " + dp + " Puanınız Oldu";
+        }
+        function p3(){
+            dp += Math.floor(Math.random() * 15) + 16;
+            dp1.innerHTML = dp;
+            u();
+            document.getElementById("d1d1").innerHTML = "DivSecurity'i İndirdiğin İçin Teşekkürler " + dp + " Puanınız Oldu";
         }
         setTimeout(function(){
             document.getElementById("badges").style.opacity = "0%";
